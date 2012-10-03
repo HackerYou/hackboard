@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hackboard</title>
+  <title>Hackeryou :: Hackboard</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "Hackboard", root_path, class: 'brand' %>
 
+        <ul class="nav pull-right">
+          <li class="divider-vertical">
+            <%= link_to new_pin_path do %>
+              <i class="icon-plus"></i>Add Pin
+            <% end %>
+          </li>
+          <li class="divider-vertical">
+            <%= link_to new_board_path do %>
+              <i class="icon-plus"></i>Add Board
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

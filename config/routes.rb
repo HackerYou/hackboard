@@ -3,6 +3,8 @@ Hackboard::Application.routes.draw do
 
   resources :boards
 
+  root to: 'pins#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

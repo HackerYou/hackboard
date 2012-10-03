@@ -1,29 +1,9 @@
-<h1>Listing pins</h1>
-
-<table>
-  <tr>
-    <th>Image</th>
-    <th>Url</th>
-    <th>Description</th>
-    <th>Board</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @pins.each do |pin| %>
-  <tr>
-    <td><%= pin.image %></td>
-    <td><%= pin.url %></td>
-    <td><%= pin.description %></td>
-    <td><%= pin.board %></td>
-    <td><%= link_to 'Show', pin %></td>
-    <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <%= content_tag_for :div, pin, class: 'span3' do %>
+    <%= image_tag pin.image.url(:default) %>
+    <%= pin.description %>
+    <%= pin.board_name %>
+    <%= link_to 'Edit', edit_pin_path(pin), class: 'edit btn btn-mini' %>
+    <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete btn btn-mini' %>
+  <% end %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Pin', new_pin_path %>
