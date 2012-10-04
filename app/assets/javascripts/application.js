@@ -12,4 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.masonry
 //= require_tree .
+
+$(function(){
+  $(".container").masonry({
+    itemSelector: '.pin',
+    columnWidth: 230
+  });
+});
