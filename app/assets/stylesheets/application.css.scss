@@ -18,3 +18,43 @@ body {
   padding-top: 50px;
   background-color: #f6f6f6;
 }
+
+.nav {
+  i {
+    margin-right: 5px;
+  }
+}
+
+.add {
+  float: left;
+  width: 140px;
+  height: 160px;
+  border: 2px solid #dfdfdf;
+  border-left-width: 0;
+  text-align: center;
+  font-size: 18px;
+  color: #524D4D;
+
+  &:first-child {
+    border-left-width: 2px;
+  }
+
+  &:hover {
+    background-color: #E1DFDF;
+    text-decoration: none;
+  }
+
+  * {
+    padding-top: 10px;
+  }
+
+  img {
+    display: block;
+    height: 80px;
+  }
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,4 +1,5 @@
 Hackboard::Application.routes.draw do
+  resources :items, only: [:new]
   resources :pins
 
   resources :boards
