@@ -10,8 +10,6 @@ gem 'paperclip', '~> 3.2'
 gem 'simple_form'
 
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
 # Gems used only for assets and not required

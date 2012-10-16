@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002114534) do
+ActiveRecord::Schema.define(:version => 20121016004153) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -35,5 +35,13 @@ ActiveRecord::Schema.define(:version => 20121002114534) do
   end
 
   add_index "pins", ["board_id"], :name => "index_pins_on_board_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "nickname"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

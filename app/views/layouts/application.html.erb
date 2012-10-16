@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Hackeryou :: Hackboard</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,6 +24,7 @@
   </div>
 
   <div class="container">
+    <%= render "shared/messages" unless flash.empty? %>
     <%= yield %>
   </div>
 

@@ -1,4 +1,6 @@
 Hackboard::Application.routes.draw do
+  devise_for :users
+
   resources :items, only: [:new]
   resources :pins
 

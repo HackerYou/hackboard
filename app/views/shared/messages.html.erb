@@ -1,0 +1,2 @@
+<%= content_tag(:p, class: 'notice'){ notice } if flash[:notice].present? %>
+<%= content_tag(:p, class: 'alert'){ alert } if flash[:alert].present? %>
