@@ -1,4 +1,9 @@
 class BoardsController < ApplicationController
+
+  before_filter :authenticate_user!, except: [:index]
+
+  respond_to :html, :json
+
   # GET /boards
   # GET /boards.json
   def index
