@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.masonry
+//= require bootstrap-dropdown
 //= require_tree .
 
 $(function(){
@@ -20,4 +21,5 @@ $(function(){
     itemSelector: '.pin',
     columnWidth: 230
   });
+
 });
