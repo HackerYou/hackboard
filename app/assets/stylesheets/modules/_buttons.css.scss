@@ -1,0 +1,50 @@
+.big-button {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .5), 0 2px white;
+  color: white;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 160px;
+  padding: 20px 10px 20px 87px;
+  position: relative;
+  text-align: left;
+
+  &:hover {
+    text-decoration:none;
+    color: white;
+  }
+
+  &.twitter {
+    background: #41C0F3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#41C0F3), to(#3FBAEC));
+    border: 1px solid #2982A8;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#41c0f3', endColorstr='#3fbaec');
+    text-shadow: 0 -1px #2982A8;
+
+    &:hover {
+      background: #3EBAEC;
+      background: -webkit-gradient(linear, left top, left bottom, from(#3EBAEC), to(#3CB3E3));
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ebaec', endColorstr='#3cb3e3');
+    }
+
+    .logo {
+      background-color: #66CAF2;
+      background-color: rgba(255, 255, 255, .2);
+      background-image: image-url('logo_twitter_38x32.png');
+    }
+
+  }
+  .logo {
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 62px;
+  }
+}

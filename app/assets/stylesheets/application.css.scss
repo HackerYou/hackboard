@@ -12,7 +12,8 @@
  *= require_tree .
  */
 
-@import "bootstrap";
+@import 'bootstrap';
+@import 'modules/buttons';
 
 body {
   padding-top: 50px;
