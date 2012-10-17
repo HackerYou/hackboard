@@ -9,8 +9,10 @@
     <% end %>
   <% end %>
 <% else %>
-  <h2>Connect with...</h2>
-  <%= link_to user_omniauth_authorize_path(:twitter), class: 'big-button twitter' do %>
-    <span class="logo"></span> Twitter
-  <% end %>
+  <div class="signup hero-unit well">
+    <h2>Sign in with...</h2>
+    <%= link_to user_omniauth_authorize_path(:twitter), class: 'big-button twitter' do %>
+      <span class="logo"></span> Twitter
+    <% end %>
+  </div>
 <% end %>
