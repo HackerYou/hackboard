@@ -1,0 +1,18 @@
+<div class="well clearfix">
+  <div class="clearfix span6 offset2">
+    <%= link_to(new_pin_path, class: 'add') do %>
+      <%= image_tag 'globe.png', class: 'centered' %>
+      <p>Add a Pin</p>
+    <% end %>
+
+    <%= link_to(new_pin_path, class: 'add') do %>
+      <%= image_tag 'upload.png', class: 'centered' %>
+      <p>Upload a Pin</p>
+    <% end %>
+
+    <%= link_to(new_board_path, class: 'add') do %>
+      <%= image_tag 'board.png', class: 'centered' %>
+      <p>Add a Board</p>
+    <% end %>
+  </div>
+</div>
