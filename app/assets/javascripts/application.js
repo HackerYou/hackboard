@@ -22,4 +22,6 @@ $(function(){
     columnWidth: 230
   });
 
+  $(".message").delay(4000).slideUp(100);
+
 });
