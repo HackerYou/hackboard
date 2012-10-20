@@ -1,2 +1,9 @@
-<%= content_tag(:p, class: 'message well notice'){ notice } if flash[:notice].present? %>
-<%= content_tag(:p, class: 'message well alert'){ alert } if flash[:alert].present? %>
+<%= content_tag(:div, class: 'alert alert-success') do %>
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <%= notice %>
+<% end if flash[:notice].present? %>
+
+<%= content_tag(:div, class: 'alert alert-error') do %>
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <%= alert %>
+<% end if flash[:alert].present? %>

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.masonry
 //= require bootstrap-dropdown
+//= require bootstrap-alert
 //= require_tree .
 
 $(function(){
@@ -21,7 +22,4 @@ $(function(){
     itemSelector: '.pin',
     columnWidth: 230
   });
-
-  $(".message").delay(4000).slideUp(100);
-
 });
