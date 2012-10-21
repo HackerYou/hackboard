@@ -5,6 +5,8 @@
     <%= image_tag pin.user.image_url, class: 'pull-left' %>
     <%= link_to pin.user.name, pin.user %> onto <%= link_to pin.board_name, pin.board %>
   </div>
-  <%= link_to 'Edit', edit_pin_path(pin), class: 'edit btn btn-mini' %>
-  <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete btn btn-mini' %>
+  <% if current_user.owns?(pin) %>
+    <%= link_to 'Edit', edit_pin_path(pin), class: 'edit btn btn-mini' %>
+    <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete btn btn-mini' %>
+  <% end %>
 <% end %>

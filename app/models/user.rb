@@ -25,4 +25,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def owns?(object)
+    object.user == self if object.respond_to?(:user)
+  end
+
 end
