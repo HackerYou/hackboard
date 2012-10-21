@@ -1,0 +1,4 @@
+<%= content_tag_for :div, board, class: 'col span3' do %>
+  <h3><%= board.name %></h3>
+  <h4><small><%= pluralize board.pins.count, "pin" %></small></h4>
+<% end %>

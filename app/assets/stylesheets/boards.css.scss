@@ -1,3 +1,16 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board-header {
+  text-align: center;
+}
+
+.board-meta {
+  line-height: 48px;
+  margin: 10px 0;
+  padding: 10px 0;
+  border: 3px double #ccc;
+  border-left-width: 0;
+  border-right-width: 0;
+}

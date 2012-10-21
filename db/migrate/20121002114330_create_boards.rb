@@ -2,6 +2,7 @@ class CreateBoards < ActiveRecord::Migration
   def change
     create_table :boards do |t|
       t.string :name
+      t.text :description
       t.references :user
 
       t.timestamps

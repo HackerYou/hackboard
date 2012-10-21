@@ -1,15 +1,18 @@
-<p id="notice"><%= notice %></p>
+<section class="board-header">
+  <h1><%= @board.name %></h1>
+</section>
 
-<p>
-  <b>Name:</b>
-  <%= @board.name %>
-</p>
+<section class="board-meta row clearfix">
+  <%= link_to @board.user, class: 'span3 board-user pull-left' do %>
+    <%= image_tag @board.user_image_url %>
+    <%= content_tag :span, @board.user_name %>
+  <% end %>
 
-<p>
-  <b>User:</b>
-  <%= @board.user %>
-</p>
+  <%= link_to "Edit", edit_board_path(@board), class: 'span1 offset2 board-edit-link btn' %>
 
+  <span class="pull-right board-info"><%= pluralize @board.pins.count, "pin" %></span>
+</section>
 
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+<%= render layout: 'layouts/pins' do %>
+  <%= render(@board.pins) || render("empty") %>
+<% end %>

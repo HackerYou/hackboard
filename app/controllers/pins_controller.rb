@@ -9,10 +9,7 @@ class PinsController < ApplicationController
   def index
     @pins = Pin.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @pins }
-    end
+    respond_with @pins
   end
 
   # GET /pins/1
@@ -20,10 +17,7 @@ class PinsController < ApplicationController
   def show
     @pin = Pin.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @pin }
-    end
+    respond_with @pin
   end
 
   # GET /pins/new
@@ -31,10 +25,7 @@ class PinsController < ApplicationController
   def new
     @pin = Pin.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @pin }
-    end
+    respond_with @pin
   end
 
   # GET /pins/1/edit
@@ -45,7 +36,7 @@ class PinsController < ApplicationController
   # POST /pins
   # POST /pins.json
   def create
-    @pin = Pin.new(params[:pin])
+    @pin = current_user.pins.build(params[:pin])
 
     respond_to do |format|
       if @pin.save

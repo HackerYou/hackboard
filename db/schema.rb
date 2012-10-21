@@ -15,9 +15,10 @@ ActiveRecord::Schema.define(:version => 20121016004153) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
+    t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "boards", ["user_id"], :name => "index_boards_on_user_id"

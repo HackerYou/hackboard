@@ -4,6 +4,8 @@ class Pin < ActiveRecord::Base
 
   has_attached_file :image, styles: {default: '200'}
 
-  delegate :name, to: :board, prefix: true,
-    allow_nil: true # TODO remove
+  delegate :name, to: :board, prefix: true
+  delegate :user, to: :board
+
+  validates :board, presence: true
 end

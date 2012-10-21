@@ -1,12 +1,6 @@
 <% if user_signed_in? %>
-  <% @pins.each do |pin| %>
-    <%= content_tag_for :div, pin, class: 'span3' do %>
-      <%= image_tag pin.image.url(:default) %>
-      <%= pin.description %>
-      <%= pin.board_name %>
-      <%= link_to 'Edit', edit_pin_path(pin), class: 'edit btn btn-mini' %>
-      <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete btn btn-mini' %>
-    <% end %>
+  <%= render layout: 'layouts/pins' do %>
+    <%= render(@pins) || render("empty") %>
   <% end %>
 <% else %>
   <div class="signup hero-unit well">

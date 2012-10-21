@@ -1,4 +1,6 @@
 Hackboard::Application.routes.draw do
+  get "users/show"
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   devise_scope :user do
@@ -7,8 +9,12 @@ Hackboard::Application.routes.draw do
 
   resources :items, only: [:new]
   resources :pins
-
   resources :boards
+
+  resources :users, only: [:show] do
+    resources :pins,   only: [:index], controller: 'users/pins'
+    resources :boards, only: [:index], controller: 'users/boards'
+  end
 
   root to: 'pins#index'
 
