@@ -1,4 +1,4 @@
 <div class="well">
   <h3>Oh nooooos...  There are no pins yet!</h3>
-  <%= render "shared/add_pin" %>
+  <%= render "shared/add_pin" if user_signed_in? %>
 </div>
