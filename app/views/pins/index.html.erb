@@ -1,12 +1,12 @@
-<% if user_signed_in? %>
-  <%= render layout: 'layouts/pins' do %>
-    <%= render(@pins) || render("empty") %>
-  <% end %>
-<% else %>
+<% if !user_signed_in? %>
   <div class="signup hero-unit well">
     <h2>Sign in with...</h2>
     <%= link_to user_omniauth_authorize_path(:twitter), class: 'big-button twitter' do %>
       <span class="logo"></span> Twitter
     <% end %>
   </div>
+<% end %>
+
+<%= render layout: 'layouts/pins' do %>
+  <%= render(@pins) || render("empty") %>
 <% end %>

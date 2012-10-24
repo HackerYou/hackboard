@@ -8,7 +8,7 @@
     <%= content_tag :span, @board.user_name %>
   <% end %>
 
-  <%= link_to "Edit", edit_board_path(@board), class: 'span1 offset2 board-edit-link btn' %>
+  <%= link_to "Edit", edit_board_path(@board), class: 'span1 offset2 board-edit-link btn' if i_own?(@board) %>
 
   <span class="pull-right board-info"><%= pluralize @board.pins.count, "pin" %></span>
 </section>

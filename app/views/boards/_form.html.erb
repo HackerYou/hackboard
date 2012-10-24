@@ -1,7 +1,7 @@
 <%= simple_form_for(@board, html: {class: 'form-horizontal'}) do |f| %>
 
   <%= f.input :name, input_html: {class: 'input-xlarge'} %>
-  <%= f.input :description, input_html: {class: 'input-xxlarge', rows: 10} %>
+  <%= f.input :description, input_html: {class: 'input-xxlarge', rows: 6} %>
 
   <div class="form-actions">
     <%= f.submit class: 'btn btn-primary' %>

@@ -7,12 +7,10 @@ Hackboard::Application.routes.draw do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  resources :items, only: [:new]
   resources :pins
   resources :boards
 
   resources :users, only: [:show] do
-    resources :pins,   only: [:index], controller: 'users/pins'
     resources :boards, only: [:index], controller: 'users/boards'
   end
 
