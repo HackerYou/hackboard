@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '3.2.8'
-gem 'thin'
+gem 'thin',   '~> 1'
+gem 'pg',     '~> 0.14'
 
-gem 'sqlite3'
 gem 'bootstrap-sass', '~> 2.1'
 gem 'paperclip', '~> 3.2'
 gem 'aws-sdk'
@@ -26,4 +26,5 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'minitest-rails'
+  gem 'sqlite3'
 end
