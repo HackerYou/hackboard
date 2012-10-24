@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20121016004153) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image_fingerprint"
     t.string   "url"
     t.text     "description"
     t.integer  "board_id"

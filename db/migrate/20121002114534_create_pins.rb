@@ -2,6 +2,7 @@ class CreatePins < ActiveRecord::Migration
   def change
     create_table :pins do |t|
       t.attachment :image
+      t.string :image_fingerprint
       t.string :url
       t.text :description
       t.references :board
