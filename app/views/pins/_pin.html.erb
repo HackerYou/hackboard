@@ -1,7 +1,7 @@
 <%= content_tag_for :div, pin, class: 'col span3' do %>
   <%= image_tag pin.image.url(:default) %>
   <p class="description"><%= pin.description %></p>
-  <div class="attribution">
+  <div class="attribution clearfix">
     <%= image_tag pin.user.image_url, class: 'pull-left' %>
     <%= link_to pin.user.name, pin.user %> onto <%= link_to pin.board_name, pin.board %>
   </div>
