@@ -56,7 +56,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
-        format.html { redirect_to @pin, notice: 'Pin was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Pin was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +72,7 @@ class PinsController < ApplicationController
     @pin.destroy
 
     respond_to do |format|
-      format.html { redirect_to pins_url }
+      format.html { redirect_to root_path, notice: 'Pin was successfully deleted.' }
       format.json { head :no_content }
     end
   end
