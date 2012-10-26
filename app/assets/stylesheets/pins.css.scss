@@ -8,12 +8,15 @@
 
 .pin {
   position: relative;
-  box-sizing: border-box;
   background: #fff;
   padding: 10px;
   padding-bottom: 0;
   margin-bottom: 10px;
   margin-left: 10px; // @override
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);

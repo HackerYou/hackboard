@@ -18,8 +18,12 @@
 //= require_tree .
 
 $(function(){
-  $(".container").masonry({
-    itemSelector: '.pin',
-    columnWidth: 230
+  var $container = $(".container");
+
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector: '.pin',
+      columnWidth: 230
+    });
   });
 });
