@@ -7,7 +7,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+    @pins = Pin.latest
 
     respond_with @pins
   end
