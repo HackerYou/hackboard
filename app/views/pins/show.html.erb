@@ -17,7 +17,7 @@
       <%= simple_form_for [@pin, Comment.new] do |f| %>
         <%= f.input :body, wrapper: :append, label: false do %>
           <%= f.input_field :body, placeholder: "Add a comment...", class: "span5" %>
-          <%= f.submit "save", class: 'btn' %>
+          <%= f.submit "comment", class: 'btn' %>
         <% end %>
       <% end %>
     </section>
