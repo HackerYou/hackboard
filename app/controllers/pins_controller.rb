@@ -15,7 +15,7 @@ class PinsController < ApplicationController
   # GET /pins/1
   # GET /pins/1.json
   def show
-    @pin = Pin.find(params[:id])
+    @pin = Pin.includes(:comments).find(params[:id])
 
     respond_with @pin
   end

@@ -22,7 +22,7 @@ $(function(){
 
   $container.imagesLoaded(function(){
     $container.masonry({
-      itemSelector: '.pin',
+      itemSelector: '.mason',
       columnWidth: 230
     });
   });

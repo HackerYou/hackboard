@@ -25,7 +25,7 @@
             </li>
 
             <li class="dropdown">
-              <a class="dropdown-toggle user-image" data-toggle="dropdown" href="#"><%= image_tag current_user.image_url %></a>
+              <a class="dropdown-toggle user-menu-image" data-toggle="dropdown" href="#"><%= image_tag current_user.image_url %></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li><%= link_to "Profile", user_path(current_user) %></li>
                 <li><%= link_to "Sign Out", destroy_user_session_path %></li>

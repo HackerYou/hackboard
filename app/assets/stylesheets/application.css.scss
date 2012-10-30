@@ -20,6 +20,12 @@ body {
   background-color: #f6f6f6;
 }
 
+small {
+  a {
+    color: #5c5c5c;
+  }
+}
+
 .nav {
   i {
     margin-right: 5px;
@@ -62,10 +68,9 @@ body {
 }
 
 .centered {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
-.user-image {
+.user-menu-image {
   width: 25px;
 }

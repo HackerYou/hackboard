@@ -8,4 +8,10 @@ class Board < ActiveRecord::Base
 
   validates :name, presence: true
   validates :user, presence: true
+
+  def cover
+    pin = pins.latest.first
+
+    pin && pin.image
+  end
 end

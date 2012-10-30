@@ -1,0 +1,29 @@
+<%= content_tag_for :div, @pin, class: 'show clearfix' do %>
+  <section class="pinner">
+    <%= image_tag @pin.user_image_url, class: 'pull-left user-image' %>
+    <h4>
+      <%= link_to @pin.user_name, @pin.user %><br>
+      <small>Pinned <%= time_ago_in_words(@pin.created_at) %> ago on <%= link_to @pin.board_name, @pin.board %></small>
+    </h4>
+  </section>
+
+  <section class="pin-image centered">
+    <%= image_tag @pin.image %>
+  </section>
+
+  <% if user_signed_in? %>
+    <section class="comment clearfix">
+      <%= image_tag current_user.image_url, class: 'pull-left user-image' %>
+      <%= simple_form_for [@pin, Comment.new] do |f| %>
+        <%= f.input :body, wrapper: :append, label: false do %>
+          <%= f.input_field :body, placeholder: "Add a comment...", class: "span5" %>
+          <%= f.submit "save", class: 'btn' %>
+        <% end %>
+      <% end %>
+    </section>
+  <% end %>
+
+  <section class="comments clearfox">
+    <%= render @pin.comments %>
+  </section>
+<% end %>

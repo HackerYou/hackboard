@@ -1,4 +1,5 @@
-<%= content_tag_for :div, board, class: 'col span3' do %>
-  <h3><%= board.name %></h3>
+<%= link_to board, class: 'col span3 centered' do %>
+  <h4><%= board.name %></h4>
   <h4><small><%= pluralize board.pins.count, "pin" %></small></h4>
+  <%= image_tag board.cover if board.cover %>
 <% end %>

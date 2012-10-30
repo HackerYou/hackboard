@@ -14,12 +14,13 @@
   padding-bottom: 0;
   margin-bottom: 10px;
   margin-left: 10px; // @override
+  line-height: 14px; // @override
 
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 
-  .btn {
+  .btn-mini {
     visibility: hidden;
     position: absolute;
     top: 20px;
@@ -38,6 +39,10 @@
     padding-top: 10px;
   }
 
+  .user-image {
+    margin-right: 10px;
+  }
+
   .attribution, .comments {
     font-size: 0.8em;
     background: #f0f0f0;
@@ -52,6 +57,44 @@
     a {
       font-weight: bold;
       color: #333;
+    }
+  }
+
+  .comments {
+    padding-top: 0;
+
+    .comment {
+      padding: 10px 0;
+      border-top: 1px solid #d1cdcd;
+    }
+  }
+
+  &.show {
+    width: 600px;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    .pinner {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d1cdcd;
+
+      h4 {
+        margin-top: 0;
+      }
+    }
+
+    .pin-image {
+      padding: 0 40px;
+      margin: 20px 0;
+      background-color: #F2F0F0;
+    }
+
+    .comments {
+      margin-top: 10px;
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
 }

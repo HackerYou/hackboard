@@ -27,4 +27,5 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'minitest-rails'
   gem 'sqlite3'
+  gem 'pry'
 end

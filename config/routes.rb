@@ -1,4 +1,6 @@
 Hackboard::Application.routes.draw do
+  get "comments/create"
+
   get "users/show"
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
@@ -7,7 +9,10 @@ Hackboard::Application.routes.draw do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  resources :pins
+  resources :pins do
+    resources :comments, only: :create
+  end
+
   resources :boards
 
   resources :users, only: [:show] do

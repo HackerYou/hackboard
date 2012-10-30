@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :boards
   has_many :pins, through: :boards
+  has_many :comments
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
