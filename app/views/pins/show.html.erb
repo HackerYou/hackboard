@@ -3,7 +3,7 @@
     <%= image_tag @pin.user_image_url, class: 'pull-left user-image' %>
     <h4>
       <%= link_to @pin.user_name, @pin.user %><br>
-      <small>Pinned <%= time_ago_in_words(@pin.created_at) %> ago on <%= link_to @pin.board_name, @pin.board %></small>
+      <small>Posted <%= time_ago_in_words(@pin.created_at) %> ago on <%= link_to @pin.board_name, @pin.board %></small>
     </h4>
   </section>
 

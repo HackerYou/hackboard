@@ -4,7 +4,7 @@
   <%= f.association :board, collection: current_user.boards %>
 
   <div class="form-actions">
-    <%= f.submit class: 'btn btn-primary' %>
+    <%= f.submit "Create Post", class: 'btn btn-primary' %>
     <%= link_to 'Back', pins_path %>
   </div>
 <% end %>

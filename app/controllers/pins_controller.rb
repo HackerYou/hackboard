@@ -40,7 +40,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to root_path, notice: 'Pin was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
         format.json { render json: @pin, status: :created, location: @pin }
       else
         format.html { render action: "new" }
@@ -56,7 +56,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
-        format.html { redirect_to root_path, notice: 'Pin was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +72,7 @@ class PinsController < ApplicationController
     @pin.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Pin was successfully deleted.' }
+      format.html { redirect_to root_path, notice: 'Post was successfully deleted.' }
       format.json { head :no_content }
     end
   end
