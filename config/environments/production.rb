@@ -24,8 +24,8 @@ Hackboard::Application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => "hackboard",
-      :access_key_id => "AKIAJB5VNW7AAKXF27SA",
-      :secret_access_key => "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"
+      :access_key_id => "",
+      :secret_access_key => ""
     },
     path: ":class/:timestamp/:fingerprint.:extension",
     url: ":s3_domain_url"
